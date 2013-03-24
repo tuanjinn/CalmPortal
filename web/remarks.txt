@@ -1,0 +1,2 @@
+<embed id="embsound" height="0" src="${siteroot}/sounds/creek.mp3" type='audio/mpeg' autostart="true" loop="true"/> 
+type='audio/mpeg' : to make sure it loop in Chrome

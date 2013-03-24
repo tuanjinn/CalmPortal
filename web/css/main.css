@@ -1,0 +1,450 @@
+/* Eric Meyer's Reset CSS*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+body            {	margin: 0;	padding: 0;	color: white;	font: normal 10pt Helvetica,sans-serif;	}
+body.bodyCalm   {   background: black; }
+body.bodyBase   {   background: gray;}
+
+.rounded { -moz-border-radius: 10px; -webkit-border-radius: 10px; -khtml-border-radius: 10px; border-radius: 10px; padding:15px}
+
+#pageWrapper    { }
+#top            { position:absolute; top:0; left:0; color:white; width:100%;	background:black; height:25px;	border-bottom: 1px solid gray; }
+#mainContainer  { margin:40px auto; width: 900px; background: white; color:#000; display:block; min-height:500px; }
+
+
+#toolbar {	position:fixed;	top:10px; right:10px; width:100px; height:20px; }
+
+
+
+#page
+{
+	/*margin:0 auto;
+	background: gray url('../images/bg/bg1.jpg') no-repeat;	
+	width:100%;
+	*/
+	position:absolute;
+	top:0; left:0;
+	min-height: 300px;
+	width:100%;
+    height: 100%;
+	
+	/*CSS3 properties - doesnt work with older IE version
+	background: url(../images/bg/bg1.jpg) no-repeat center center fixed;*/
+    background: no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+}
+
+#page2
+{
+	/*margin:0 auto;
+	background: gray url('../images/bg/bg1.jpg') no-repeat;	
+	width:100%;
+	*/
+	position:absolute;
+	top:0; left:0;
+	min-height: 300px;
+	width:100%;
+    height: 100%;
+	
+	/*CSS3 properties - doesnt work with older IE version*/
+	background: url(../images/bgnormal.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+}
+
+#agentchat
+{
+    position:absolute; z-index: 3000; top:50px; left: 5px; margin-top:10px; border-top:solid 1px gray; overflow:auto; overflow-x: hidden;
+    padding: 3px;
+    min-height: 250px;
+}
+
+#agentperholder
+{
+    position: absolute;
+    top:100px;
+    right:5px;
+}
+
+#agentchatbox
+{
+    position: absolute;
+    bottom:20px;
+    left:3px;
+}
+
+#main
+{
+    position: absolute;
+	top: 40px;
+	left: 150px;
+	width: 70%;
+	height: 80%;
+	z-index: 2000;
+	clear: both;	
+	padding-top: 30px;
+	padding-left: 35px;
+}
+
+#header
+{
+	margin: 0;
+	padding: 0;
+	border-top: 3px solid #C9E0ED;
+}
+
+#content
+{
+    padding: 20px;
+}
+
+
+#footer
+{
+	position: absolute;
+	top: 10;
+	left: 0;
+	width: 300px;
+	min-height: 600px;
+	height: 98%;
+	background-image: url(../images/footer-bg.png);
+	z-index: 2000;
+	clear: both;
+}
+
+#thumbnails
+{
+    position:absolute; top:80px; left:10px; display: block; width: 100%;
+}
+
+#footer div.thumbnail
+{
+    float:left; margin:5px; width: 40%; height:50px;     
+}
+
+#footer img.thumbnail
+{
+    width:110px; height:50px;  border:solid 1px gray;
+    cursor: pointer;
+}
+
+#footer img.thumbnail:hover
+{
+    border:solid 2px #3ff;
+}
+
+#footercontact
+{
+	position: absolute;
+	top:20px;
+	left:20px;
+}
+
+#optionbar
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 100%;
+    min-height: 500px;
+	background-image: url(../images/footer-bg.png);
+	z-index: 2000;
+	clear: both;
+}
+
+
+
+.graytextbox
+{
+	width: 150px;
+	height: 20px;
+	padding: 4px;
+	font-size: 12px;
+	font-family: 'open sans', helvetica, sans-serif;
+	font-weight: 500;
+	border: 1px solid rgba(0, 0, 0, .5);
+	color: white;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	background: rgba(255, 255, 255, .3);
+	outline: none;
+}
+
+#sidecontent
+{
+	position: absolute;
+	top: 59px;
+	right: 50px;
+	width: 236px;
+	height: 450px;
+	z-index: 2000;
+	clear: both;	
+	padding-top: 30px;
+	padding-left: 35px;
+	display:none;
+}
+
+.translucent_bg
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: gray;/* #383165; */
+	z-index: -10;
+	opacity: 0.8;
+}
+
+.borderradius, .translucent_bg
+{
+	-moz-border-radius: 22px;
+	-webkit-border-radius: 22px;
+	border-radius: 22px;
+}
+
+
+
+#logo
+{
+	padding: 10px 20px;
+	font-size: 200%;
+}
+
+#mainmenu
+{
+	background:white url(bg.gif) repeat-x left top;
+}
+
+#mainmenu ul
+{
+	padding:6px 20px 5px 20px;
+	margin:0px;
+}
+
+#mainmenu ul li
+{
+	display: inline;
+}
+
+#mainmenu ul li a
+{
+	color:#ffffff;
+	background-color:transparent;
+	font-size:12px;
+	font-weight:bold;
+	text-decoration:none;
+	padding:5px 8px;
+}
+
+#mainmenu ul li a:hover, #mainmenu ul li.active a
+{
+	color: #6399cd;
+	background-color:#EFF4FA;
+	text-decoration:none;
+}
+
+a, a:visited
+{
+    color:#3ff;
+    text-decoration: none;
+}
+
+div.flash-error, div.flash-notice, div.flash-success
+{
+	padding:.8em;
+	margin-bottom:1em;
+	border:2px solid #ddd;
+}
+
+div.flash-error
+{
+	background:#FBE3E4;
+	color:#8a1f11;
+	border-color:#FBC2C4;
+}
+
+div.flash-notice
+{
+	background:#FFF6BF;
+	color:#514721;
+	border-color:#FFD324;
+}
+
+div.flash-success
+{
+	background:#E6EFC2;
+	color:#264409;
+	border-color:#C6D880;
+}
+
+div.flash-error a
+{
+	color:#8a1f11;
+}
+
+div.flash-notice a
+{
+	color:#514721;
+}
+
+div.flash-success a
+{
+	color:#264409;
+}
+
+div.form .rememberMe label
+{
+	display: inline;
+}
+
+div.view
+{
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #C9E0ED;
+}
+
+div.breadcrumbs
+{
+	font-size: 0.9em;
+	padding: 5px 20px;
+}
+
+div.breadcrumbs span
+{
+	font-weight: bold;
+}
+
+div.search-form
+{
+	padding: 10px;
+	margin: 10px 0;
+	background: #eee;
+}
+
+.portlet
+{
+
+}
+
+.portlet-decoration
+{
+	padding: 3px 8px;
+	background: #B7D6E7;
+	border-left: 5px solid #6FACCF;
+}
+
+.portlet-title
+{
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	color: #298dcd;
+}
+
+.portlet-content
+{
+	font-size:0.9em;
+	margin: 0 0 15px 0;
+	padding: 5px 8px;
+	background:#EFFDFF;
+}
+
+.portlet-content ul
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+}
+
+.portlet-content li
+{
+	padding: 2px 0 4px 0px;
+}
+
+.operations
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.operations li
+{
+	padding-bottom: 2px;
+}
+
+.operations li a
+{
+	font: bold 12px Arial;
+	color: #0066A4;
+	display: block;
+	padding: 2px 0 2px 8px;
+	line-height: 15px;
+	text-decoration: none;
+}
+
+.operations li a:visited
+{
+	color: #0066A4;
+}
+
+.operations li a:hover
+{
+	background: #80CFFF;
+}
+
+
+
+/*LIGHTBOX SETUP*/
+
+#wrapper {
+    width:600px;
+    margin:0 auto; /*centers the div horizontally in all browsers (except IE)*/
+    background:#fff;
+    text-align:left; /*resets text alignment from body tag */
+    border:1px solid #ccc;
+    border-top:none;
+    padding:25px;
+    /*Let's add some CSS3 styles, these will degrade gracefully in older browser and IE*/
+    border-radius:0 0 5px 5px;
+    -moz-border-radius:0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    box-shadow:0 0 5px #ccc;
+    -moz-box-shadow:0 0 5px #ccc;
+    -webkit-box-shadow:0 0 5px #ccc;
+    color:black;
+}
+
+#lightbox {
+    position:fixed; /* keeps the lightbox window in the current viewport */
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url(../images/overlay.png) repeat;
+    z-index:2100;
+    text-align:center;
+}
+
+#lightbox img {
+    box-shadow:0 0 25px #111;
+    -webkit-box-shadow:0 0 25px #111;
+    -moz-box-shadow:0 0 25px #111;
+    max-width:940px;
+}
+
+/* END LIGHTBOX SETUP*/
