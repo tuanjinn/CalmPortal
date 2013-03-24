@@ -28,4 +28,14 @@ public class ShoutboardController extends BaseController {
     }
     
     
+    
+    @RequestMapping(value="/shoutboard/question.htm")
+    public String question(ModelMap model){
+        QuestionRepository quesRepo = new QuestionRepository();
+        List<Question> questions = quesRepo.GetQuestion();
+        model.addAttribute("questions", questions);
+        return "Shoutboard/index";
+    }
+    
+    
 }
