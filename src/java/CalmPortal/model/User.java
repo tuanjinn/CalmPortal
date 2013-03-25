@@ -14,6 +14,15 @@ public class User {
     private String displayName;
     private UserType userType;
 
+    public User(String username, String fullName, String displayName, UserType userType) {
+        this.username = username;
+        this.fullName = fullName;
+        this.displayName = displayName;
+        this.userType = userType;
+    }
+    
+    
+
     public String getUsername() {
         return username;
     }

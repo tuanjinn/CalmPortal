@@ -1,8 +1,11 @@
 <%@ include file="../baseheader.jsp" %>
-
-<div id="questionContainer">
-    <c:forEach items="${questions}" var="ques">
-        ${ques.title}
+<h1>Shoutboard release your stresses</h1>
+<div id="shoutContainer">
+    <c:forEach items="${shouts}" var="shout">
+        <div class="shoutBlock">
+            <b>${shout.user.username}:</b> ${shout.msg}
+        </div>
+        
     </c:forEach>
 </div>
 
