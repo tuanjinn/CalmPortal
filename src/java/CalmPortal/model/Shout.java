@@ -10,16 +10,17 @@ import java.util.Date;
 public class Shout {
     private int shoutId;
     private String msg;
-    private User user;
+    private User user;    
     private Date dateTime;
+    private Location location;
 
-    public Shout(int shoutId, String msg, User user, Date dateTime) {
+    public Shout(int shoutId, String msg, User user, Date dateTime, Location location) {
         this.shoutId = shoutId;
         this.msg = msg;
         this.user = user;
         this.dateTime = dateTime;
-    }
-    
+        this.location = location;
+    } 
     
     
     public int getShoutId() {
@@ -53,6 +54,16 @@ public class Shout {
     public void setDateTime(Date dateTime) {
         this.dateTime = dateTime;
     }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+    
+    
     
     
 }

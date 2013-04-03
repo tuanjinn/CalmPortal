@@ -55,5 +55,13 @@ public class User {
         this.userType = userType;
     }
     
+    @Override public String toString()
+    {
+        if(this.userType == UserType.anonymous)
+            return "Someone";
+        
+        return this.displayName;
+    }
+    
     
 }
