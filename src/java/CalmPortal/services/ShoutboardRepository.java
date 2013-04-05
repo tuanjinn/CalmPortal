@@ -35,4 +35,12 @@ public class ShoutboardRepository {
         return shouts; 
     }
     
+    public Shout CreateShout(String msg)
+    {
+        User user = new User("messi", "messi", "messi", UserType.anonymous);
+               
+        Location loc = new Location(10, "Vietnam", "VN", "Hanoi", "Europe");
+        return new Shout(10, msg, user, new Date(), loc);      
+    }
+    
 }

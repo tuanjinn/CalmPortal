@@ -13,7 +13,21 @@
     </c:forEach>
     <div class="shoutCommand">
         <textarea name="shoutMsg" id="shoutMsg"></textarea>
+        <div class="buttons">
+            <input type="text" id="shoutName" value="anonymous" />
+            <input type="button" id="btnShout" class="btnAction" value="Scream it" />
+        </div>
     </div>
+</div>
+
+
+
+<div class="shoutBlockTemplate">
+    <div class="shoutHeader">
+        <span class="userDisplayName"></span> in <span class="location"></span> <span class="time"></span> 
+    </div>
+    <div class="shoutMsgBlock">
+    </div>            
 </div>
 
 

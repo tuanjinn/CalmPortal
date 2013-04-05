@@ -6,6 +6,7 @@ import CalmPortal.model.Shout;
 import CalmPortal.services.QuestionRepository;
 import CalmPortal.services.ShoutboardRepository;
 import java.util.List;
+import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +25,17 @@ public class ShoutboardController extends BaseController {
         List<Shout> shouts = shoutRepo.GetShouts();
         model.addAttribute("shouts", shouts);
         return "Shoutboard/index";
+    }
+    
+    @RequestMapping(value="/shoutboard/_shout.htm")
+    protected String shout(ModelMap model, HttpServletRequest request)
+    {
+        //String query = request.ge;
+        
+        ShoutboardRepository shoutRepo = new ShoutboardRepository();
+        Shout shout = shoutRepo.CreateShout("lalala");
+        model.addAttribute(shout);
+        return "Shoutboard/_shout";
     }
     
     
