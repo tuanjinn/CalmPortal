@@ -1,6 +1,8 @@
 
 package CalmPortal.model;
 
+import com.mysql.jdbc.StringUtils;
+
 /**
  *
  * @author tuanjinn
@@ -9,16 +11,18 @@ package CalmPortal.model;
 
 
 public class User {
-    private String username;
+    private String username;    
     private String fullName;
     private String displayName;
     private UserType userType;
+    private String ava;
 
-    public User(String username, String fullName, String displayName, UserType userType) {
+    public User(String username, String fullName, String displayName, UserType userType, String ava) {
         this.username = username;
         this.fullName = fullName;
         this.displayName = displayName;
         this.userType = userType;
+        this.ava = ava;
     }
     
     
@@ -53,6 +57,17 @@ public class User {
 
     public void setUserType(UserType userType) {
         this.userType = userType;
+    }
+
+    public String getAva() {
+        if(!StringUtils.isNullOrEmpty(this.ava))
+            return ava;
+        
+        return "sad.png";
+    }
+
+    public void setAva(String ava) {
+        this.ava = ava;
     }
     
     @Override public String toString()

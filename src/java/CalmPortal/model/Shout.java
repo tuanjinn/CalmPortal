@@ -1,6 +1,8 @@
 
 package CalmPortal.model;
 
+import java.text.Format;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -61,6 +63,12 @@ public class Shout {
 
     public void setLocation(Location location) {
         this.location = location;
+    }
+    
+    public String getSimpleDateTime()
+    {
+        Format formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return formatter.format(this.dateTime);
     }
     
     

@@ -14,13 +14,15 @@ public class Location {
     private String countryCode;
     private String cityName;
     private String continent;
+    private String ip;
 
-    public Location(int locationId, String countryName, String countryCode, String cityName, String continent) {
+    public Location(int locationId, String countryName, String countryCode, String cityName, String continent, String ip) {
         this.locationId = locationId;
         this.countryName = countryName;
         this.countryCode = countryCode;
         this.cityName = cityName;
         this.continent = continent;
+        this.ip = ip;
     }
     
     
@@ -64,9 +66,19 @@ public class Location {
     public void setContinent(String continent) {
         this.continent = continent;
     }
+
+    public String getIp() {
+        return ip;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
+    
+    
     
     @Override public String toString()
     {
-        return this.countryName;
+        return this.cityName + " - " + this.countryName;
     }
 }

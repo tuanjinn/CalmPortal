@@ -14,7 +14,14 @@ import org.springframework.ui.ModelMap;
  * @author Jinn
  */
 public abstract class BaseController{
-
+    protected String imagePhysPath;
+    protected String avaPhyPath;
+    
+    public void RequestInit(HttpServletRequest request)
+    {
+        this.imagePhysPath = request.getSession().getServletContext().getRealPath("/images");
+        this.avaPhyPath = request.getSession().getServletContext().getRealPath("/images/ava");
+    }
 
     public boolean CheckAuthentication(HttpServletRequest request, ModelMap modelmap)
     {

@@ -24,22 +24,22 @@ public class ShoutboardRepository {
     public List<Shout> GenerateShouts()    
     {
         List<Shout> shouts = new ArrayList<Shout>();
-        User user = new User("test", "user", "user", UserType.anonymous);
+        User user = new User("test", "user", "user", UserType.anonymous, null);
         
-        for(int i = 0; i < 10; i++)
+        for(int i = 0; i < 5; i++)
         {
-           Location loc = new Location(i, "Netherland", "NL", "Eindhoven", "Europe");
+           Location loc = new Location(i, "Netherland", "NL", "Eindhoven", "Europe", null);
            shouts.add(new Shout(i,"blah blah", user, new Date(), loc));
            
         }
         return shouts; 
     }
     
-    public Shout CreateShout(String msg)
+    public Shout CreateShout(String userDisplayName, String msg, String ava, Location loc)
     {
-        User user = new User("messi", "messi", "messi", UserType.anonymous);
+        User user = new User("messi", userDisplayName, userDisplayName, UserType.anonymous, ava);
                
-        Location loc = new Location(10, "Vietnam", "VN", "Hanoi", "Europe");
+        //Location loc = new Location(10, "Vietnam", "VN", "Hanoi", "Europe");
         return new Shout(10, msg, user, new Date(), loc);      
     }
     
