@@ -1,4 +1,4 @@
-<div class="shoutBlock" id="sh-${shout.shoutId}">
+<div class="shoutBlock bghover softRounded" id="sh-${shout.shoutId}">
     <div class="shoutAva">
         <img class="ava" src="../images/ava/${shout.user.ava}" />
     </div>

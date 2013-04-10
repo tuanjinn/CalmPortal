@@ -11,11 +11,14 @@ package CalmPortal.model;
 public class Question {
     private int questionId;
     private String title;
+    private String description;
+    private String fullText;
     
-    public Question(int id, String title)
+    public Question(int id, String title, String description)
     {
         this.questionId = id;
         this.title = title;
+        this.description = description;
     }
 
     public int getQuestionId() {
@@ -33,6 +36,24 @@ public class Question {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getFullText() {
+        return fullText;
+    }
+
+    public void setFullText(String fullText) {
+        this.fullText = fullText;
+    }
+    
+    
     
     
 

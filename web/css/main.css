@@ -3,22 +3,23 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 body                { margin: 0; padding: 0; color: white;	font: normal 12px Helvetica,sans-serif;	}
 body.bodyCalm       {   background: black; }
-body.bodyBase   {   background: gray;}
+body.bodyBase   {   background: url(../images/bg/bg6.jpg) no-repeat center center fixed;	-webkit-background-size: cover;	-moz-background-size: cover;-o-background-size: cover;	background-size: cover; }
 
 h1, h2, h3 { font-weight: bold; }
-h1  { font-size:16px; color:blue; }
+h1  { font-size:16px; color:#fff; }
 input[type=text], textarea  { padding: 2px; display:inline-block;  border:solid 1px gray;}
 input[type=button] {padding: 2px;}
 
 .rounded { -moz-border-radius: 10px; -webkit-border-radius: 10px; -khtml-border-radius: 10px; border-radius: 10px; padding:15px}
+.softRounded  { -moz-border-radius: 5px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; padding:6px}
 
-#pageWrapper    { }
+#pageWrapper    {   }
 #top            { position:absolute; top:0; left:0; color:white; width:100%;	background:black; height:25px;	border-bottom: 1px solid gray; }
-#mainContainer  { margin:40px auto; width: 90%; background: white; color:#000; display:block; min-height:500px; }
+#mainContainer  { margin:40px auto; width: 90%; background: rgba(243, 243, 243, 0.3); color:#000; display:inline-block; min-height:100px; }
 #toolbar {	position:fixed;	top:10px; right:10px; width:100px; height:20px; }
 
-#shoutContainer { clear:both; display: block; margin-top:5px; width: 100%; }
-.shoutBlock {clear:both; float:left; width:100%; width:100%; display: block; margin: 3px; padding: 3px }
+#shoutContainer, #questionContainer { clear:both; display: inline-block; margin-top:5px; width: 100%; vertical-align: top;}
+.shoutBlock {clear:both; background: #dcdcdc; float:left; width:100%; width:100%; display: block; margin: 3px; padding: 3px }
 
 .shoutBlockTemplate { display: none; }
 .shoutAva { float:left; width:50px; height:50px; border: solid 1px gray; margin-right: 5px;}
@@ -30,6 +31,10 @@ input[type=button] {padding: 2px;}
 .shoutCommand textarea { width:98%;}
 .shoutCommand .buttons { width:98%; display: block; text-align: right;}
 
+/* Question block */
+.questionBlock { background: #dcdcdc; width:46%; display: inline-block; margin: 1px; padding: 5px; min-height: 50px; text-align: center; }
+.questionBlock .title { font-weight: bold; font-size: 150%;}
+.questionBlock .description { clear:both; display:inline-block; color:gray; margin: 0px;}
 
 
 /* generic stuff */
