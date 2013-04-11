@@ -19,7 +19,19 @@ shoutBoardInit = function(){
     });
     
     //hoverable blocks
-     alterBgOnHover(".bghover");    
+     alterBgOnHover(".bghover");   
+     $(".bghover").click(function(){
+         var $this = $(this);
+         var quesId = $this.attr("quesId");
+         
+         $(".active").removeClass("active");
+         $(".quesDescription").hide();
+         $this.addClass("active");
+                 
+         
+         var $quesDescription = $("#quesDesc-" + quesId);
+         $quesDescription.fadeIn("slow");
+     });
 };
 
 sendShoutMsg = function(){
