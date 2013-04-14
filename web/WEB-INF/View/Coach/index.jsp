@@ -1,16 +1,15 @@
 <%@ include file="../baseheader.jsp" %>
-
+<h1>Choose your coaching programme</h1>
 <div id="questionContainer">
-    <c:forEach items="${questions}" var="ques">
-        <div class="questionBlock bghover" id="ques-${ques.questionId}" quesId="${ques.questionId}">
-            <div class="title">${ques.title}</div>
-            <div class="shortDescription">${ques.shortDescription}</div>
+    <c:forEach items="${programmes}" var="prog">
+        <div class="questionBlock bghover" id="prog-${prog.programmeId}" blockId="${prog.programmeId}">
+            <div class="title">${prog.title}</div>
+            <div class="shortDescription">${prog.shortDescription}</div>
             
-            <div class="quesDescription" id="quesDesc-${ques.questionId}">
-                ${ques.description}
+            <div class="description" id="desc-${prog.programmeId}">
+                ${prog.description}
             </div>
-        </div>
-        
+        </div>        
     </c:forEach>
 </div>
 

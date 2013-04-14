@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class QuestionRepository {
 
-    public List<Question> GetQuestion() {
+    public List<Question> GetQuestions() {
         List<Question> questions = new ArrayList<Question>();
         questions.add(new Question(1, "Le boss", "My boss is crazy and mad"));
         questions.add(new Question(2, "Le girl friend", "Overly attached girlfriend"));

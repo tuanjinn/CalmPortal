@@ -3,8 +3,27 @@ TUAN JINN
  */
 $(document).ready(function(){
     shoutBoardInit();
-       
+    coachInit();   
+    
+    $("#mainContainer").fadeIn("slow");
 });
+
+coachInit = function(){
+    //hoverable blocks
+     alterBgOnHover(".bghover");   
+     $(".bghover").click(function(){
+         var $this = $(this);
+         var blockId = $this.attr("blockId");
+         
+         $(".active").removeClass("active");
+         $(".description").hide();
+         $this.addClass("active");
+                 
+         
+         var $quesDescription = $("#desc-" + blockId);
+         $quesDescription.fadeIn("slow");
+     });
+}
 
 shoutBoardInit = function(){
     retrieveLocationInfo();
@@ -18,20 +37,7 @@ shoutBoardInit = function(){
         handleEnterKey(event, sendShoutMsg);
     });
     
-    //hoverable blocks
-     alterBgOnHover(".bghover");   
-     $(".bghover").click(function(){
-         var $this = $(this);
-         var quesId = $this.attr("quesId");
-         
-         $(".active").removeClass("active");
-         $(".quesDescription").hide();
-         $this.addClass("active");
-                 
-         
-         var $quesDescription = $("#quesDesc-" + quesId);
-         $quesDescription.fadeIn("slow");
-     });
+    
 };
 
 sendShoutMsg = function(){
