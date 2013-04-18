@@ -8,9 +8,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
         <title>Calm portal... a place to relax</title>        
-        <link rel="stylesheet" href="${cssurl}" type="text/css" media=screen>
+        
         <link rel="shortcut icon" href="${siteroot}images/favicon.ico" type="image/ico" />
         <link href="${siteroot}css/main.css" rel="stylesheet" type="text/css" media=screen>
+        <link href="${siteroot}css/responsive.css" rel="stylesheet" type="text/css">
         <link href="${siteroot}css/jquery-ui.css" rel="stylesheet" type="text/css" media=screen>
         <script src="${siteroot}js/lib/jquery.js" type="text/javascript" ></script>
         <script src="${siteroot}js/lib/jquery-ui.js" type="text/javascript" ></script>

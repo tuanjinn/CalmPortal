@@ -15,10 +15,13 @@ input[type=button] {padding: 2px;}
 
 #pageWrapper    { overflow: auto;  }
 #top            { position:absolute; top:0; left:0; color:white; width:100%;	background:black; height:25px;	border-bottom: 1px solid gray; }
-#mainContainer  { display:none; margin:40px auto; width: 90%; background: rgba(243, 243, 243, 0.2); color:#000; min-height:100px; }
+#mainContainer  { display:none; margin:40px auto; width: 90%;  color:#000; }
 #toolbar {	position:fixed;	top:10px; right:10px; width:100px; height:20px; }
+#sideContainer { display:none; width:27%; margin:40px 5px 0px 5px; overflow: hidden;   }
 
-#shoutContainer, #questionContainer { clear:both; display:inline-block; margin-top:5px; width: 100%; vertical-align: top;}
+
+#mainContainer, #sideContainer { background: rgba(243, 243, 243, 0.2); min-height:100px;  }
+#shoutContainer, #questionContainer { clear:both; display:inline-block; margin:5px 0px 0px 0px; width: 100%; vertical-align: top;}
 .shoutBlock {clear:both; background: #dcdcdc; float:left; width:100%; width:100%; display: block; margin: 3px; padding: 3px }
 
 .shoutBlockTemplate { display: none; }
@@ -33,14 +36,16 @@ input[type=button] {padding: 2px;}
 
 /* Question block */
  #questionContainer { text-align: center;}
-.questionBlock { vertical-align:text-top ; background: #dcdcdc; width:45%; display:inline-block; margin: 1px; padding: 5px 3px 2px 3px; min-height: 50px; text-align: center; cursor:pointer;}
+.questionBlock { vertical-align:text-top; background: #dcdcdc; width:32%; display:inline-block; margin: 1px; padding: 5px 3px 2px 3px; min-height: 50px; text-align: center; overflow: hidden; cursor:pointer;}
 .questionBlock .title { font-weight: bold; font-size: 150%;}
 .questionBlock .shortDescription { clear:both; display:inline-block; color:gray; margin: 0px;}
 .questionBlock .description { display:none; width:98%; margin-top:10px; padding:3px; overflow: auto;}
-.questionBlock.active { }
+.questionBlock.active {  }
 
 /* generic stuff */
 .btnAction { color:#000; background: orange;}
+
+
 
 #page
 {

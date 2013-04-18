@@ -7,7 +7,12 @@
             <div class="shortDescription">${prog.shortDescription}</div>
             
             <div class="description" id="desc-${prog.programmeId}">
-                ${prog.description}
+                <div class="ratingBlock">
+                    yes no <input type="button" value="View details" />
+                </div>
+                <div>
+                    ${prog.description}
+                </div>
             </div>
         </div>        
     </c:forEach>

@@ -18,7 +18,7 @@ coachInit = function(){
          $(".active").removeClass("active");
          $(".description").hide();
          $this.addClass("active");
-                 
+         $this.css("background-color", "#819FF7");        
          
          var $quesDescription = $("#desc-" + blockId);
          $quesDescription.fadeIn("slow");
@@ -82,10 +82,12 @@ alterBgOnHover = function($targetBlock){
     else
         $block = $targetBlock;
     
+    var currentColor = $block.css("background-color"); 
     $block.hover(function(){
         $(this).animate({ backgroundColor: "#B044AA", color: "#fff" }, 300); 
     }, function(){
-        $(this).animate({ backgroundColor: "#dcdcdc", color: "#000" }, 10); 
+        
+        $(this).animate({ backgroundColor: currentColor, color: "#000" }, 10); 
     });    
 };
 
