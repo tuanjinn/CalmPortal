@@ -15,7 +15,7 @@ and (min-width : 481px) and (max-width : 768px) {
 and (min-width : 768px) {
     #mainContainer { width:60%; margin: 40px 3% auto 10px; float:left;  }
     .questionBlock { width:45% } 
-    #sideContainer { display: inline-block;}
+    #sideContainer { display: block;}
 }
 
 /* iPads (portrait and landscape) ----------- */
