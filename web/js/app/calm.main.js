@@ -134,17 +134,12 @@ function agentResponse(usermsg)
 
 function randomizeBackground()
 {
-    //var ind = Math.floor(Math.random()*bgImgs.length);
-    //if(ind == bgImgs.length) ind = bgImgs.length - 1;
-    //var bgImg = bgImgs[ind];  //not used! will be done on server	    
-    
     $page.hide();
     createOrRemoveProgressBar(true, 'body');
     
     $.ajax({
         url: "../home/_getrandombgimg.htm",
-        success: function(data){             
-            //$page.css('background-image', "url('../images/bg/" + data + "')");
+        success: function(data){   
             $("#temp").attr('src', '../images/bg/' + data)
                 .load(function(){
                     $page.css('background-image', "url('" + $("#temp").attr('src') + "')");
@@ -303,7 +298,7 @@ function initLightBox()
     });
 
     //Click anywhere on the page to get rid of lightbox window
-    $('#lightbox').live('click', function() { //must use live, as the lightbox element is inserted into the DOM
-        $('#lightbox').hide();
-    });
+    //$('#lightbox').live('click', function() { //must use live, as the lightbox element is inserted into the DOM
+    //    $('#lightbox').hide();
+    //});
 }

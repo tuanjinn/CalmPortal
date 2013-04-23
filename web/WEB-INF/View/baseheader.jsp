@@ -21,6 +21,7 @@
     <body class="bodyBase">
     <div id="pageWrapper">  
         <div id="top">
+            <a href="${siteroot}home/index.htm">Home</a>
             <a href="${siteroot}coach/index.htm">Coach</a>
             <a href="${siteroot}coach/questions.htm">Questions</a>
             <a href="${siteroot}shoutboard/index.htm">Shoutboard</a>

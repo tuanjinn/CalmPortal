@@ -20,13 +20,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HomeController extends BaseController {
 
-    private final String defaultBgThumbPath = "C:\\Program Files\\Apache Software Foundation\\Tomcat 6.0\\webapps\\CalmPortal\\images\\bg\\thumbs";
-    private final String defaultBgPath = "C:\\Program Files\\Apache Software Foundation\\Tomcat 6.0\\webapps\\CalmPortal\\images\\bg";
+    //private String defaultBgThumbPath;// = "C:\\Program Files\\Apache Software Foundation\\Tomcat 6.0\\webapps\\CalmPortal\\images\\bg\\thumbs";
+    //private String defaultBgPath;// = "C:\\Program Files\\Apache Software Foundation\\Tomcat 6.0\\webapps\\CalmPortal\\images\\bg";
     
     @RequestMapping(value="/home/index.htm")
     public String index(ModelMap model, HttpServletRequest request)
     {
-        String[] thumbs = LoadThumbnailImages();
+        RequestInit(request);
+        String[] thumbs = LoadThumbnailImages(request);
         model.addAttribute("thumbs", thumbs);
         
         String bgImg = GetRandomFileOfFolder(defaultBgPath);
@@ -47,13 +48,15 @@ public class HomeController extends BaseController {
     }
     
     @RequestMapping(value="/home/_getrandombgimg.htm", method=RequestMethod.GET)
-    public @ResponseBody String GetRandomBgImage() //@RequestParam String prefImg)
+    public @ResponseBody String GetRandomBgImage(HttpServletRequest request) //@RequestParam String prefImg)
     {
+        RequestInit(request);
         return GetRandomFileOfFolder(defaultBgPath);
     }
     
-    public String[] LoadThumbnailImages()
+    public String[] LoadThumbnailImages(HttpServletRequest request)
     {
+        RequestInit(request);
         return LoadFileNamesOfFolder(defaultBgThumbPath); 
     }
     
@@ -81,6 +84,5 @@ public class HomeController extends BaseController {
         return children; 
     }
     
-
 
 }

@@ -1,12 +1,33 @@
 /* 
 TUAN JINN
  */
+var $sideContainer;
+var sideContainerTimer;
+
 $(document).ready(function(){
-    shoutBoardInit();
-    coachInit();   
+    coachInit();
+    sideContainerInit();
     
     $("#mainContainer").fadeIn("slow");
 });
+
+sideContainerInit = function(){
+    $sideContainer = $("#sideContainer");
+    if($sideContainer == undefined || $sideContainer.length == 0)
+        return;
+    
+    sideContainerTimer = setInterval(loadSideContainer, 200);
+}
+
+loadSideContainer = function(){
+    if($sideContainer.attr("isloaded") == "true" || !$sideContainer.is(":visible"))
+        return;
+    
+    $sideContainer.html("hello");
+    $sideContainer.attr("isloaded", "true");
+    clearInterval(sideContainerTimer);
+    
+}
 
 coachInit = function(){
     //hoverable blocks
@@ -25,6 +46,25 @@ coachInit = function(){
      });
 }
 
+
+
+alterBgOnHover = function($targetBlock){
+    var $block;
+    if(!$targetBlock.jquery)
+        $block = jQuery($targetBlock);
+    else
+        $block = $targetBlock;
+    
+    var currentColor = $block.css("background-color"); 
+    $block.hover(function(){
+        $(this).animate({ backgroundColor: "#B044AA", color: "#fff" }, 300); 
+    }, function(){
+        
+        $(this).animate({ backgroundColor: currentColor, color: "#000" }, 10); 
+    });    
+};
+
+/* SHOUTBOARD */
 shoutBoardInit = function(){
     retrieveLocationInfo();
     
@@ -75,22 +115,6 @@ appendShoutMsg = function(data){
     scrollToEle($shoutBlock);
 };
 
-alterBgOnHover = function($targetBlock){
-    var $block;
-    if(!$targetBlock.jquery)
-        $block = jQuery($targetBlock);
-    else
-        $block = $targetBlock;
-    
-    var currentColor = $block.css("background-color"); 
-    $block.hover(function(){
-        $(this).animate({ backgroundColor: "#B044AA", color: "#fff" }, 300); 
-    }, function(){
-        
-        $(this).animate({ backgroundColor: currentColor, color: "#000" }, 10); 
-    });    
-};
-
 createShoutMsgFromTemplate = function(msg){
     var $shoutBlock = $(".shoutBlockTemplate").clone();
     $shoutBlock.removeClass("shoutBlockTemplate").addClass("shoutBlock");
@@ -106,6 +130,8 @@ createShoutMsgFromTemplate = function(msg){
     $shoutBlock.animate({ backgroundColor: "#fff" }, 1500);
     scrollToEle($shoutBlock);
 };
+
+/* End - SHOUTBOARD */
 
 scrollToEle = function($element){
     $('html, body').animate({

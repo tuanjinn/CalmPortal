@@ -16,11 +16,15 @@ import org.springframework.ui.ModelMap;
 public abstract class BaseController{
     protected String imagePhysPath;
     protected String avaPhyPath;
+    protected String defaultBgThumbPath;
+    protected String defaultBgPath;
     
     public void RequestInit(HttpServletRequest request)
     {
         this.imagePhysPath = request.getSession().getServletContext().getRealPath("/images");
         this.avaPhyPath = request.getSession().getServletContext().getRealPath("/images/ava");
+        this.defaultBgThumbPath = this.imagePhysPath + "/bg/thumbs";
+        this.defaultBgPath = this.imagePhysPath + "/bg";
     }
 
     public boolean CheckAuthentication(HttpServletRequest request, ModelMap modelmap)

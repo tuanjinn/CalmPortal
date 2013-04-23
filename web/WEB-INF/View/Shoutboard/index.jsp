@@ -1,4 +1,10 @@
 <%@ include file="../baseheader.jsp" %>
+<script>
+    $(document).ready(function(){
+        shoutBoardInit();
+    });
+</script>
+
 <h1>Shoutboard release your stresses</h1>
 <div id="shoutContainer">
     <c:forEach items="${shouts}" var="shout">
