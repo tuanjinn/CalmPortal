@@ -3,7 +3,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 body                { margin: 0; padding: 0; color: white;	font: normal 12px Helvetica,sans-serif;	}
 body.bodyCalm       {   background: black; }
-body.bodyBase   {   background: url(../images/homebg2.jpg) no-repeat center center fixed;	-webkit-background-size: cover;	-moz-background-size: cover;-o-background-size: cover;	background-size: cover; }
+body.bodyBase   {   background: url(../images/homebg1.jpg) no-repeat center center fixed;	-webkit-background-size: cover;	-moz-background-size: cover;-o-background-size: cover;	background-size: cover; }
 
 h1, h2, h3 { font-weight: bold; }
 h1  { font-size:16px; color:#fff; }
@@ -45,27 +45,33 @@ input[type=button] {padding: 2px;}
 /* generic stuff */
 .btnAction { color:#000; background: orange;}
 
+.bghover:hover {
+    background:blueviolet; color:white;
+    
+    -webkit-transition:background 0.5s ease-in;  
+   -moz-transition:background 0.5s ease-in;  
+   -o-transition:background 0.5s ease-in;  
+   transition:background 0.5s ease-in;  
+}
+.bghover:hover * {color:#fff;}
+
+
+.programmeDetailsBlock { color:#fff;}
+
 
 
 #page
 {
-	/*margin:0 auto;
-	background: gray url('../images/bg/bg1.jpg') no-repeat;	
-	width:100%;
-	*/
-	position:absolute;
-	top:0; left:0;
-	min-height: 300px;
-	width:100%;
-    height: 100%;
-	
-	/*CSS3 properties - doesnt work with older IE version
-	background: url(../images/bg/bg1.jpg) no-repeat center center fixed;*/
-    background: no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+    /*margin:0 auto;
+    background: gray url('../images/bg/bg1.jpg') no-repeat;	
+    width:100%;
+    */
+    position:absolute; top:0; left:0; min-height: 300px; width:100%; height: 100%;
+
+    /*CSS3 properties - doesnt work with older IE version
+    background: url(../images/bg/bg1.jpg) no-repeat center center fixed;*/
+    background: no-repeat center center fixed;	
+    -webkit-background-size: cover;	-moz-background-size: cover; -o-background-size: cover;   background-size: cover;
 	
 }
 

@@ -25,6 +25,15 @@ public class CoachController {
         return "Coach/index";
     }
     
+    @RequestMapping(value="/coach/programme.htm")
+    public String programme(ModelMap model){
+        CoachRepository coachRepo = new CoachRepository();
+        List<Programme> programmes = coachRepo.getProgrammes();
+        model.addAttribute("prog", programmes.get(1));
+        return "Coach/programme";
+    }
+    
+    
     @RequestMapping(value="/coach/questions.htm")
     public String questions(ModelMap model){
         QuestionRepository quesRepo = new QuestionRepository();

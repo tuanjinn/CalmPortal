@@ -31,7 +31,7 @@ loadSideContainer = function(){
 
 coachInit = function(){
     //hoverable blocks
-     alterBgOnHover(".bghover");   
+     //alterBgOnHover(".bghover");   
      $(".bghover").click(function(){
          var $this = $(this);
          var blockId = $this.attr("blockId");
@@ -39,7 +39,6 @@ coachInit = function(){
          $(".active").removeClass("active");
          $(".description").hide();
          $this.addClass("active");
-         $this.css("background-color", "#819FF7");        
          
          var $quesDescription = $("#desc-" + blockId);
          $quesDescription.fadeIn("slow");
@@ -47,7 +46,7 @@ coachInit = function(){
 }
 
 
-
+//NOT USED
 alterBgOnHover = function($targetBlock){
     var $block;
     if(!$targetBlock.jquery)
