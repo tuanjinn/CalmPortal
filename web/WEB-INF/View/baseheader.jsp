@@ -3,6 +3,7 @@
    "http://www.w3.org/TR/html4/loose.dtd">
 
 <c:url value="/" var="siteroot" />
+<c:url value="/relax/" var="approot" />
 
 <html>
     <head>
@@ -21,11 +22,11 @@
     <body class="bodyBase">
     <div id="pageWrapper">  
         <div id="top">
-            <a href="${siteroot}home/index.htm">Home</a>
-            <a href="${siteroot}coach/index.htm">Coach</a>
-            <a href="${siteroot}coach/questions.htm">Questions</a>
-            <a href="${siteroot}shoutboard/index.htm">Shoutboard</a>
+            <a href="${approot}home/index">Home</a>
+            <a href="${approot}coach/index">Coach</a>
+            <a href="${approot}coach/questions">Questions</a>
+            <a href="${approot}shoutboard/index">Shoutboard</a>
         </div>
-        <div id="mainContainer" class="rounded">
+        <div id="mainContainer" class="rounded trans">
 	
 	

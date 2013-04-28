@@ -24,7 +24,7 @@ public class ShoutboardController extends BaseController {
     private String avaPath;
     
         
-    @RequestMapping(value="/shoutboard/index.htm")
+    @RequestMapping(value="/shoutboard/index")
     protected String index(ModelMap model){
         ShoutboardRepository shoutRepo = new ShoutboardRepository();
         List<Shout> shouts = shoutRepo.GetShouts();
@@ -32,7 +32,7 @@ public class ShoutboardController extends BaseController {
         return "Shoutboard/index";
     }
     
-    @RequestMapping(value="/shoutboard/_shout.htm")
+    @RequestMapping(value="/shoutboard/_shout")
     protected String shout(ModelMap model, HttpServletRequest request, @RequestParam("msg") String msg, @RequestParam("shoutName") String shoutName)
     {
         RequestInit(request);

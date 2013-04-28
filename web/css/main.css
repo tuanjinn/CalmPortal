@@ -20,7 +20,7 @@ input[type=button] {padding: 2px;}
 #sideContainer { display:none; width:26%; margin:40px 5px 0px 5px; overflow: hidden;   }
 
 
-#mainContainer, #sideContainer { background: rgba(243, 243, 243, 0.2); min-height:100px;  }
+.trans { background: rgba(243, 243, 243, 0.2); min-height:100px;  }
 #shoutContainer, #questionContainer { clear:both; display:inline-block; margin:5px 0px 0px 0px; width: 100%; vertical-align: top;}
 .shoutBlock {clear:both; background: #dcdcdc; float:left; width:100%; width:100%; display: block; margin: 3px; padding: 3px }
 
@@ -46,15 +46,10 @@ input[type=button] {padding: 2px;}
 .btnAction { color:#000; background: orange;}
 
 .bghover:hover {
-    background:blueviolet; color:white;
-    
-    -webkit-transition:background 0.5s ease-in;  
-   -moz-transition:background 0.5s ease-in;  
-   -o-transition:background 0.5s ease-in;  
-   transition:background 0.5s ease-in;  
+    background:blueviolet; color:white;    
+    transition:background 0.5s ease-in; -webkit-transition:background 0.5s ease-in; -moz-transition:background 0.5s ease-in; -o-transition:background 0.5s ease-in;   
 }
 .bghover:hover * {color:#fff;}
-
 
 .programmeDetailsBlock { color:#fff;}
 

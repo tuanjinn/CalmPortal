@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class CoachController {
     
-    @RequestMapping(value="/coach/index.htm")
+    @RequestMapping(value="/coach/index")
     public String index(ModelMap model){
         CoachRepository coachRepo = new CoachRepository();
         List<Programme> programmes = coachRepo.getProgrammes();
@@ -25,7 +25,7 @@ public class CoachController {
         return "Coach/index";
     }
     
-    @RequestMapping(value="/coach/programme.htm")
+    @RequestMapping(value="/coach/programme")
     public String programme(ModelMap model){
         CoachRepository coachRepo = new CoachRepository();
         List<Programme> programmes = coachRepo.getProgrammes();
@@ -34,7 +34,7 @@ public class CoachController {
     }
     
     
-    @RequestMapping(value="/coach/questions.htm")
+    @RequestMapping(value="/coach/questions")
     public String questions(ModelMap model){
         QuestionRepository quesRepo = new QuestionRepository();
         List<Question> questions = quesRepo.GetQuestions();
