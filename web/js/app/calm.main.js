@@ -7,8 +7,8 @@ var $page;
 
 $(document).ready(function(){
 	
-	init();
-	resetToolbarTimeout();   
+    init();
+    resetToolbarTimeout();   
     initialSideContent();
     initLightBox();
 	
@@ -18,14 +18,14 @@ $(document).ready(function(){
 	});
 	
 	$(document).mousemove(function(){
-		$("#footer").fadeIn('slow');
-		resetToolbarTimeout();
+            $("#footer").fadeIn('slow');
+            resetToolbarTimeout();
 	});
 	
 	$("#footer").mouseover(function(){
-		$('#footer').fadeIn('slow');
-		clearToolbarHidingTimeout();
-		hidingEnabled = false;
+            $('#footer').fadeIn('slow');
+            clearToolbarHidingTimeout();
+            hidingEnabled = false;
 	});
 	
 	$('#footer').mouseout(function () {
@@ -87,7 +87,7 @@ function init()
     $("img.thumbnail", "#footer").click(function(){       
         createOrRemoveProgressBar(true, '#page'); //
         var $this = $(this);
-        $("#temp").attr('src', '../images/bg/' + $this.attr('var'))
+        $("#temp").attr('src', '../../images/bg/' + $this.attr('var'))
         .load(function(){            
             $page.stop(true, true); //prevent stacking animation            
             $page.fadeTo('fast', 0.5);
@@ -140,7 +140,7 @@ function randomizeBackground()
     $.ajax({
         url: "../home/_getrandombgimg.htm",
         success: function(data){   
-            $("#temp").attr('src', '../images/bg/' + data)
+            $("#temp").attr('src', '../../images/bg/' + data)
                 .load(function(){
                     $page.css('background-image', "url('" + $("#temp").attr('src') + "')");
                     $page.fadeIn(1500);
@@ -156,7 +156,7 @@ function createOrRemoveProgressBar(isCreate, container){
     }
         
     if(isCreate){
-        var progressHtml = '<div id="progress" align="center" style="margin:0 auto; z-index:2500; margin-top:100px; width:180px; height:100px;">Loading... please wait...<br /><br /><br /><img src="../images/spinner.gif"/></div>';
+        var progressHtml = '<div id="progress" align="center" style="margin:0 auto; z-index:2500; margin-top:100px; width:180px; height:100px;">Loading... please wait...<br /><br /><br /><img src="../../images/spinner.gif"/></div>';
         $(progressHtml).appendTo(container);
         $("div#progress").show();
     }
@@ -170,7 +170,7 @@ function createOrRemoveProgressBar(isCreate, container){
 function initialSideContent()
 {
     //funpic:
-    var funPath = '../images/fun/';
+    var funPath = '../../images/fun/';
     var ind = Math.floor(Math.random()*$funpics.length);
     if(ind == $funpics.length) ind = $funpics.length - 1;    
     var funimg = $funpics[ind];	
@@ -206,13 +206,13 @@ function toggleSideButton()
         if(sideToogleButtonEnable)
 	{
 		$('#sidecontent').fadeOut('slow');
-		$('#sidetogglebtn').attr('src', '../images/sidedisable.png');
+		$('#sidetogglebtn').attr('src', '../../images/sidedisable.png');
 		sideToogleButtonEnable = false;
 	}
 	else
 	{
 		$('#sidecontent').fadeIn('slow');
-		$('#sidetogglebtn').attr('src', '../images/sideenable.png');
+		$('#sidetogglebtn').attr('src', '../../images/sideenable.png');
 		sideToogleButtonEnable = true;
 	}
 }

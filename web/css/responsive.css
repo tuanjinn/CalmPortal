@@ -1,6 +1,6 @@
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
-and (min-width : 320px) and (max-width : 480px) {
+and (max-width : 480px) {
     .questionBlock { width:95% }
 }
 

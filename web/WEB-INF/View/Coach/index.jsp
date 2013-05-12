@@ -8,7 +8,7 @@
             
             <div class="description" id="desc-${prog.programmeId}">
                 <div class="ratingBlock">
-                    yes no <input type="button" value="View details" />
+                    <a href="programme/${prog.programmeId}" class="btnAction bghover">View details</a>
                 </div>
                 <div>
                     ${prog.description}

@@ -7,7 +7,9 @@ import CalmPortal.services.QuestionRepository;
 import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -25,8 +27,8 @@ public class CoachController {
         return "Coach/index";
     }
     
-    @RequestMapping(value="/coach/programme")
-    public String programme(ModelMap model){
+    @RequestMapping(value="/coach/programme/{id}")
+    public String programme(ModelMap model, @PathVariable("id") int id){
         CoachRepository coachRepo = new CoachRepository();
         List<Programme> programmes = coachRepo.getProgrammes();
         model.addAttribute("prog", programmes.get(1));

@@ -68,16 +68,15 @@ function init()
         toggleSideButton();
         if(!agentLoaded)
         {
-        $.ajax({
-            'url': '../home/agent.htm',
-            'success': function(data){                
-                $("#sidecontentmain").html(data);
-                setupAgent();
-                agentLoaded = true;
-            }
-            
-            }
-            );
+            $.ajax({
+                'url': '../home/agent.htm',
+                'success': function(data){                
+                    $("#sidecontentmain").html(data);
+                    setupAgent();
+                    agentLoaded = true;
+                }
+
+            });
         }
         
         return false;
@@ -87,7 +86,7 @@ function init()
     $("img.thumbnail", "#footer").click(function(){       
         createOrRemoveProgressBar(true, '#page'); //
         var $this = $(this);
-        $("#temp").attr('src', '../images/bg/' + $this.attr('var'))
+        $("#temp").attr('src', '../../images/bg/' + $this.attr('var'))
         .load(function(){            
             $page.stop(true, true); //prevent stacking animation            
             $page.fadeTo('fast', 0.5);
@@ -142,15 +141,17 @@ function randomizeBackground()
     createOrRemoveProgressBar(true, 'body');
     
     $.ajax({
-        url: "../home/_getrandombgimg.htm",
+        url: "../home/_getrandombgimg",
         success: function(data){             
             //$page.css('background-image', "url('../images/bg/" + data + "')");
-            $("#temp").attr('src', '../images/bg/' + data)
+            $("#temp").attr('src', '../../images/bg/' + data)
                 .load(function(){
                     $page.css('background-image', "url('" + $("#temp").attr('src') + "')");
                     $page.fadeIn(1500);
                     createOrRemoveProgressBar(false, 'body');
                 });
+                
+            alert($("#temp").attr('src'));
         }
     });
 }
@@ -197,29 +198,29 @@ function initialSideContent()
 
 function initialSideButtonToolbar()
 {
-	$('#sidetogglebtn').click(function(){
-		toggleSideButton();
-	});
-	
-	$('#closeside').click(function(){
-		toggleSideButton();
-	});
+    $('#sidetogglebtn').click(function(){
+            toggleSideButton();
+    });
+
+    $('#closeside').click(function(){
+            toggleSideButton();
+    });
 }
 
 function toggleSideButton()
 {
-        if(sideToogleButtonEnable)
-	{
-		$('#sidecontent').fadeOut('slow');
-		$('#sidetogglebtn').attr('src', '../images/sidedisable.png');
-		sideToogleButtonEnable = false;
-	}
-	else
-	{
-		$('#sidecontent').fadeIn('slow');
-		$('#sidetogglebtn').attr('src', '../images/sideenable.png');
-		sideToogleButtonEnable = true;
-	}
+    if(sideToogleButtonEnable)
+    {
+            $('#sidecontent').fadeOut('slow');
+            $('#sidetogglebtn').attr('src', '../../images/sidedisable.png');
+            sideToogleButtonEnable = false;
+    }
+    else
+    {
+            $('#sidecontent').fadeIn('slow');
+            $('#sidetogglebtn').attr('src', '../../images/sideenable.png');
+            sideToogleButtonEnable = true;
+    }
 }
 
 /* Top option */

@@ -11,7 +11,7 @@ input[type=text], textarea  { padding: 2px; display:inline-block;  border:solid 
 input[type=button] {padding: 2px;}
 
 .rounded { -moz-border-radius: 10px; -webkit-border-radius: 10px; -khtml-border-radius: 10px; border-radius: 10px; padding:15px}
-.softRounded  { -moz-border-radius: 5px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; padding:6px}
+.softRounded, .btnAction  { -moz-border-radius: 5px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; padding:6px}
 
 #pageWrapper    { overflow: auto;  }
 #top            { position:absolute; top:0; left:0; color:white; width:100%;	background:black; height:25px;	border-bottom: 1px solid gray; }
@@ -43,7 +43,7 @@ input[type=button] {padding: 2px;}
 .questionBlock.active {  }
 
 /* generic stuff */
-.btnAction { color:#000; background: orange;}
+.btnAction { color:#000; background: orange; border:1px solid gray; padding: 3px; display:inline-block}
 
 .bghover:hover {
     background:blueviolet; color:white;    
@@ -287,7 +287,7 @@ input[type=button] {padding: 2px;}
 
 a, a:visited
 {
-    color:#3ff;
+    color: gray;/*#3ff;*/
     text-decoration: none;
 }
 

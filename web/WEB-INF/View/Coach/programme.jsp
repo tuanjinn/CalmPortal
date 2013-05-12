@@ -5,7 +5,7 @@
         <div class="shortDescription">${prog.shortDescription}</div>
 
         <div class="description" id="desc-${prog.programmeId}">
-            ${prog.description}
+            ${prog.fullText}
         </div>
     </div>        
 </div>

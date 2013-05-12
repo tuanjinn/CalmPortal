@@ -18,9 +18,9 @@
         
         <div id="toolbar">
             
-            <img src="../images/agent.png" id="btagent" style="cursor:pointer; vertical-align:middle" title="Let me talk to my agent" />
-            <a href="../home/login.htm">   <img src="../images/login.png" id="btlogin" style="cursor:pointer; vertical-align:middle" title="Login" /></a>
-            <img src="../images/sidedisable.png" id="sidetogglebtn" style="cursor:pointer; vertical-align:middle" title="Enable/Disable side information" />
+            <img src="${siteroot}images/agent.png" id="btagent" style="cursor:pointer; vertical-align:middle" title="Let me talk to my agent" />
+            <a href="${siteroot}home/login.htm">   <img src="${siteroot}/images/login.png" id="btlogin" style="cursor:pointer; vertical-align:middle" title="Login" /></a>
+            <img src="${siteroot}images/sidedisable.png" id="sidetogglebtn" style="cursor:pointer; vertical-align:middle" title="Enable/Disable side information" />
         </div>
         <div style="position:fixed; bottom:10px; right:10px; width:300px; height:10px">
             Copyright &copy; 2012 by CalmPortal. All Rights Reserved.

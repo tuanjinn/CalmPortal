@@ -23,7 +23,7 @@ public class HomeController extends BaseController {
     //private String defaultBgThumbPath;// = "C:\\Program Files\\Apache Software Foundation\\Tomcat 6.0\\webapps\\CalmPortal\\images\\bg\\thumbs";
     //private String defaultBgPath;// = "C:\\Program Files\\Apache Software Foundation\\Tomcat 6.0\\webapps\\CalmPortal\\images\\bg";
     
-    @RequestMapping(value="/home/index.htm")
+    @RequestMapping(value="/home/index")
     public String index(ModelMap model, HttpServletRequest request)
     {
         RequestInit(request);
@@ -35,19 +35,19 @@ public class HomeController extends BaseController {
         return "Home/index";
     }
     
-    @RequestMapping(value="/home/login.htm")
+    @RequestMapping(value="/home/login")
     public String login(ModelMap model, HttpServletRequest request)
     {
         return "Home/login";
     }
     
-    @RequestMapping(value="/home/agent.htm", method=RequestMethod.GET)
+    @RequestMapping(value="/home/agent", method=RequestMethod.GET)
     public String agent(ModelMap model, HttpServletRequest request)
     {
         return "Home/agent";
     }
     
-    @RequestMapping(value="/home/_getrandombgimg.htm", method=RequestMethod.GET)
+    @RequestMapping(value="/home/_getrandombgimg", method=RequestMethod.GET)
     public @ResponseBody String GetRandomBgImage(HttpServletRequest request) //@RequestParam String prefImg)
     {
         RequestInit(request);

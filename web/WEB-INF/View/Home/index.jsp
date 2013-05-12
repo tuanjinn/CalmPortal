@@ -4,7 +4,7 @@
 	<div class="translucent_bg"></div>
     <div id="sidecontentmain">
     <div style="position:absolute; top:10px; right:15px">
-		<img src="../images/close.png" id="closeside" style="cursor:pointer" title="close" />
+		<img src="${siteroot}/images/close.png" id="closeside" style="cursor:pointer" title="close" />
 	</div>
 	<div>
 		A little fun...<br /><br />
@@ -18,7 +18,7 @@
         <span id="activity"></span>
 	</div>
     <div style="position:absolute; bottom:10px; left: 10; margin-top:10px; border-top:solid 1px gray">
-		<strong>Did you perform your task?</strong><br /><br />	
+        <strong>Did you perform your task?</strong><br /><br />	
         <a href="#">Yes I did</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">No I didn't</a>
 	</div>  
     </div>
