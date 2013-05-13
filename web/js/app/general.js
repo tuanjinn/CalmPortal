@@ -23,7 +23,7 @@ loadSideContainer = function(){
     if($sideContainer.attr("isloaded") == "true" || !$sideContainer.is(":visible"))
         return;
     
-    $sideContainer.html("hello");
+    //$sideContainer.html("hello");
     $sideContainer.attr("isloaded", "true");
     clearInterval(sideContainerTimer);
     

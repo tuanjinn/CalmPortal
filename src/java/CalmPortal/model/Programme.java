@@ -17,6 +17,7 @@ public class Programme {
         this.title = title;
         this.shortDescription = shortDescription;
         this.description = "Modern life is full of hassles, deadlines, frustrations, and demands. For many people, stress is so commonplace that it has become a way of life. Stress isn’t always bad. In small doses, it can help you perform under pressure and motivate you to do your best. But when you’re constantly running in emergency mode, your mind and body pay the price. You can protect yourself by recognizing the signs and symptoms of stress and taking steps to reduce its harmful effects";
+        this.fullText = "Modern life is full of hassles, deadlines, frustrations, and demands.<br /><br /> For many people, stress is so commonplace that it has become a way of life. Stress isn’t always bad. In small doses, it can help you perform under pressure and motivate you to do your best. But when you’re constantly running in emergency mode, your mind and body pay the price. You can protect yourself by recognizing the signs and symptoms of stress and taking steps to reduce its harmful effects";
     }
     
     
