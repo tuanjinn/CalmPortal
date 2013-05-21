@@ -5,7 +5,7 @@
 <c:url value="/" var="siteroot" />
 <c:url value="/relax/" var="approot" />
 
-<html>
+<html class="base">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
         <title>Calm portal... a place to relax</title>        
@@ -22,10 +22,12 @@
     <body class="bodyBase">
     <div id="pageWrapper">  
         <div id="top">
-            <a href="${approot}home/index">Home</a>
-            <a href="${approot}coach/index">Coach</a>
-            <a href="${approot}coach/questions">Questions</a>
-            <a href="${approot}shoutboard/index">Shoutboard</a>
+            <div class="topMenu">
+                <a href="${approot}home/index" title="Go to home page and relax"><span class="icon">&#128167;</span></a>
+                <a href="${approot}coach/index" title="Our coaching programme"><span class="icon">&#128101</span></a>
+                <a href="${approot}coach/questions" title="Question"><span class="icon">&#59141;</span></a>
+                <a href="${approot}shoutboard/index" title="Shoutboard - scream to the world"><span class="icon">&#128227;</span></a>
+            </div>
         </div>
         <div id="mainContainer" class="rounded trans">
 	

@@ -24,8 +24,8 @@
     </div>
 </div>        
 
-
+<!--
 <embed id="embsound" height="0" src="${siteroot}/sounds/creek.mp3" type='audio/mpeg' autostart="true" loop="true"/> 
-
+-->
 
 <%@ include file="../footer.jsp" %>

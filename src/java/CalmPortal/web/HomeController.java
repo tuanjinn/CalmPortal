@@ -95,5 +95,10 @@ public class HomeController extends BaseController {
         return "Home/_sideContent";
     }
     
+    @RequestMapping(value="/home/about")
+    public String about(ModelMap modelmap){        
+        return "Home/credit";
+    }
+    
 
 }

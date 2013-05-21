@@ -4,7 +4,7 @@
 <c:url value="/css/main.css" var="cssurl" />
 <c:url value="/" var="siteroot" />
 <c:url value="/relax/" var="approot" />
-<html>
+<html class="calm">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
         <title>Calm portal... a place to relax</title>        
@@ -18,6 +18,6 @@
     </head>
     <body class="bodyCalm">
         
-    <div class="container" id="page">
+    <div class="container" id="pageee">
 	
 	

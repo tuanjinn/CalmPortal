@@ -29,7 +29,7 @@ public class ShoutboardRepository {
         for(int i = 0; i < 5; i++)
         {
            Location loc = new Location(i, "Netherland", "NL", "Eindhoven", "Europe", null);
-           shouts.add(new Shout(i,"blah blah", user, new Date(), loc));
+           shouts.add(new Shout(i,"Too much work today, I can not stand my boss anymore...", user, new Date(), loc));
            
         }
         return shouts; 

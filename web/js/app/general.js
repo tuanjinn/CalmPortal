@@ -3,19 +3,19 @@ TUAN JINN
  */
 var $sideContainer;
 var sideContainerTimer;
+var siteroot = getRootWebSitePath() + '/relax/';
 
 $(document).ready(function(){
     coachInit();
     sideContainerInit();
-    
     $("#mainContainer").fadeIn("slow");
 });
 
 sideContainerInit = function(){
     $sideContainer = $("#sideContainer");
+    
     if($sideContainer == undefined || $sideContainer.length == 0)
         return;
-    
     loadSideContainer();
     //sideContainerTimer = setInterval(loadSideContainer, 200);
 };
@@ -27,10 +27,7 @@ loadSideContainer = function(){
     //$sideContainer.attr("isloaded", "true");
     //clearInterval(sideContainerTimer);
     
-    $sideContainer.load('../home/_getSideContent');
-    
-    
-    
+    $sideContainer.load(siteroot + '/home/_getSideContent');
 };
 
 coachInit = function(){
@@ -47,6 +44,17 @@ coachInit = function(){
          var $quesDescription = $("#desc-" + blockId);
          $quesDescription.fadeIn("slow");
      });
+}
+
+function getRootWebSitePath()
+{
+    var _location = document.location.toString();
+    var applicationNameIndex = _location.indexOf('/', _location.indexOf('://') + 3);
+    var applicationName = _location.substring(0, applicationNameIndex) + '/';
+    var webFolderIndex = _location.indexOf('/', _location.indexOf(applicationName) + applicationName.length);
+    var webFolderFullPath = _location.substring(0, webFolderIndex);
+
+    return webFolderFullPath;
 }
 
 
@@ -94,7 +102,7 @@ sendShoutMsgAjax = function(shoutName, msgText){
     var values = { msg: msgText, shoutName: shoutName, countryCode: Location.countryCode, countryName: Location.countryName, cityName: Location.cityName, ip: Location.ip};
     $.ajax({
         type: 'POST',
-        url: "../shoutboard/_shout.htm",
+        url: siteroot + "/shoutboard/_shout.htm",
         data: values,
         dataType: "text",
         success: function(response) {   

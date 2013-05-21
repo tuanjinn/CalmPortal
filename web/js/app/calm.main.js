@@ -56,8 +56,8 @@ function init()
     //$("#page").css("min-height", broHeight);	
     //to handle video clip width later
     //$("#page").width(broWidth);
-    $page = $("#page:first");
-    $page.height(broHeight);
+    $page = $("html");
+    //$page.height(broHeight);
     
     $("<img id='temp' />").appendTo('body').hide();
     randomizeBackground();    //only startup effect
@@ -68,18 +68,15 @@ function init()
         toggleSideButton();
         if(!agentLoaded)
         {
-        $.ajax({
-            'url': '../home/agent.htm',
-            'success': function(data){                
-                $("#sidecontentmain").html(data);
-                setupAgent();
-                agentLoaded = true;
-            }
-            
-            }
-            );
-        }
-        
+            $.ajax({
+                'url': '../home/agent.htm',
+                'success': function(data){                
+                    $("#sidecontentmain").html(data);
+                    setupAgent();
+                    agentLoaded = true;
+                }
+            });
+        }        
         return false;
     });
     
