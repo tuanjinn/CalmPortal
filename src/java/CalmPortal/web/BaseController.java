@@ -8,6 +8,7 @@ package CalmPortal.web;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  *
@@ -51,9 +52,10 @@ public abstract class BaseController{
 
     //should be filter or soemthing (equivalent from .net)
     public void OnLoad(HttpServletRequest request, ModelMap modelmap)
-    {
-       
+    {       
         modelmap.addAttribute("message", "Hello");
     }
+    
+    
 
 }

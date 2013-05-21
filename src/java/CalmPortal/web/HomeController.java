@@ -4,6 +4,8 @@
  */
 
 package CalmPortal.web;
+import CalmPortal.model.Fact;
+import CalmPortal.services.FactRepository;
 import java.io.File;
 import java.util.Random;
 import javax.servlet.http.HttpServletRequest;
@@ -82,6 +84,15 @@ public class HomeController extends BaseController {
             return null;
        
         return children; 
+    }
+    
+    @RequestMapping(value="/home/_getSideContent")
+    public String getSideContent(ModelMap modelmap){
+        FactRepository factRepo = new FactRepository();
+        Fact randomFact = factRepo.getRandomFact();
+        modelmap.addAttribute(randomFact);
+        
+        return "Home/_sideContent";
     }
     
 

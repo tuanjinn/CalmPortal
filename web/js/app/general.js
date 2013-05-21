@@ -16,18 +16,22 @@ sideContainerInit = function(){
     if($sideContainer == undefined || $sideContainer.length == 0)
         return;
     
-    sideContainerTimer = setInterval(loadSideContainer, 200);
-}
+    loadSideContainer();
+    //sideContainerTimer = setInterval(loadSideContainer, 200);
+};
 
 loadSideContainer = function(){
-    if($sideContainer.attr("isloaded") == "true" || !$sideContainer.is(":visible"))
-        return;
-    
+    //if($sideContainer.attr("isloaded") == "true" || !$sideContainer.is(":visible"))
+    //    return;
     //$sideContainer.html("hello");
-    $sideContainer.attr("isloaded", "true");
-    clearInterval(sideContainerTimer);
+    //$sideContainer.attr("isloaded", "true");
+    //clearInterval(sideContainerTimer);
     
-}
+    $sideContainer.load('../home/_getSideContent');
+    
+    
+    
+};
 
 coachInit = function(){
     //hoverable blocks
@@ -173,8 +177,8 @@ retrieveLocationInfo = function(){
 
 var Location = {
     countryCode: 'NA',
-    countryName: 'Parrallel Universe',
-    cityName: 'Stressfree land',
+    countryName: 'Europe',
+    cityName: 'Somewhere',
     ip: '1.1.1.1',
     loaded:false
 };

@@ -13,9 +13,8 @@ public class Utils {
     {
         String[] files = LoadFileNamesOfFolder(path);
         if(files != null && files.length > 0)
-        {
-            Random generator = new Random(files.length);
-            int ranIndex = generator.nextInt(files.length-1);
+        {            
+            int ranIndex = GetRandomNr(files.length);
             return files[ranIndex];
         }
         return null;
@@ -32,4 +31,12 @@ public class Utils {
        
         return children; 
     }
+    
+    public static int GetRandomNr(int range)
+    {
+        Random ran = new Random();
+        int value = ran.nextInt(range + 1);
+        return value;
+    
+    }        
 }
